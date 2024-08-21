@@ -4,18 +4,15 @@ import { FaArrowLeft } from "react-icons/fa6";
 import TodoItemCompleated from "../components/shared/TodoItemCompleated";
 import { Link } from "react-router-dom";
 import TodoContext from "../context/TodoContext";
-import Spinner from "../components/shared/Spinner";
 
 const CompleatedTask = () => {
   const { compleated, isloading } = useContext(TodoContext);
 
-  if (!isloading && (!compleated || compleated.length === 0)) {
+  if (!compleated || compleated.length === 0) {
     return <h2>No Compleated Task.</h2>;
   }
 
-  return isloading ? (
-    <Spinner />
-  ) : (
+  return (
     <div>
       <header>
         <Link to="/">

@@ -31,7 +31,7 @@ export const TodoProvider = ({ children }) => {
   //Add Task
   const addTask = (newTask) => {
     newTask.id = uuidv4();
-    setTodo([newTask, ...todo]);
+    setTodo([...todo, newTask]);
   };
   //Delete Task
   const deleteTask = async (id) => {

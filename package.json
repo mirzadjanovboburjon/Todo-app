@@ -4,16 +4,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "json-server --watch db.json --port 5000",
-    "devto": "concurrently \"npm run server\" \"npm run dev\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "concurrently": "^8.2.2",

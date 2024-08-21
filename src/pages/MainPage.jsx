@@ -3,7 +3,6 @@ import { useContext } from "react";
 import TodoItem from "../components/TodoItem";
 import AddTaskLink from "../components/shared/AddTaskLink";
 import TodoContext from "../context/TodoContext";
-import Spinner from "../components/shared/Spinner";
 
 const MainPage = () => {
   const { todo, isloading } = useContext(TodoContext);
@@ -18,9 +17,7 @@ const MainPage = () => {
     );
   }
 
-  return isloading ? (
-    <Spinner />
-  ) : (
+  return (
     <div>
       <header>
         <h2>ToDo List</h2>
